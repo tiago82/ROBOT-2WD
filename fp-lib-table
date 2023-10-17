@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "GERE_footprints")(type "KiCad")(uri "${KIPRJMOD}/GERE_footprints")(options "")(descr ""))
+)
