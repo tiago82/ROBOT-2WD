@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 4.0,
-          "height": 6.0,
-          "width": 6.0
+          "drill": 0.8,
+          "height": 1.9,
+          "width": 1.4
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -112,7 +112,7 @@
       "rules": {
         "max_error": 0.005,
         "min_clearance": 0.254,
-        "min_connection": 1.5,
+        "min_connection": 0.09999999999999999,
         "min_copper_edge_clearance": 0.19999999999999998,
         "min_hole_clearance": 0.254,
         "min_hole_to_hole": 0.25,
@@ -124,8 +124,8 @@
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.3,
-        "min_via_annular_width": 0.19999999999999998,
-        "min_via_diameter": 0.5,
+        "min_via_annular_width": 0.39999999999999997,
+        "min_via_diameter": 0.7999999999999999,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
         "solder_mask_to_copper_clearance": 0.005,
@@ -415,14 +415,14 @@
     ]
   },
   "meta": {
-    "filename": "Robot_PIBID_Artigo_(110x55mm).kicad_pro",
+    "filename": "Robot_PCB_(110x55mm).kicad_pro",
     "version": 1
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.6,
+        "clearance": 0.254,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -439,7 +439,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.4,
+        "clearance": 0.3,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -456,24 +456,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "GNDD",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
-        "via_diameter": 0.8,
-        "via_drill": 0.4,
-        "wire_width": 16
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.6,
+        "clearance": 0.3,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -496,7 +479,7 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "GNDD",
+        "netclass": "Default",
         "pattern": "GND"
       },
       {
