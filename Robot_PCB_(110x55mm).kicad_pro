@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.9,
-          "width": 1.4
+          "drill": 1.0,
+          "height": 2.0,
+          "width": 2.0
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -515,7 +515,7 @@
       "netlist": "",
       "specctra_dsn": "",
       "step": "../../../../Desktop/Robot_PIBID_Artigo.step",
-      "vrml": "../../../../Desktop/Robot_PIBID_Artigo5.wrl"
+      "vrml": "../../../Desktop/Robot_2WD.wrl"
     },
     "page_layout_descr_file": ""
   },

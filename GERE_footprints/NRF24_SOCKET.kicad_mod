@@ -56,12 +56,12 @@
   (pad "7" thru_hole circle (at 7.61 0) (size 2.032 2.032) (drill 0.9) (layers "*.Cu" "*.Mask") (tstamp e7da1a77-670e-431e-91bb-803ad65698d4))
   (pad "8" thru_hole circle (at 7.61 -2.54) (size 2.032 2.032) (drill 0.9) (layers "*.Cu" "*.Mask") (tstamp af8783e1-c1af-4de7-8b6a-3d6c98a52da8))
   (model "${KIPRJMOD}/GERE_3dmodels/NRF24/PBD-8.step"
-    (offset (xyz 2.55 2.55 0))
+    (offset (xyz -0.05 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
   (model "${KIPRJMOD}/GERE_3dmodels/NRF24/nRF24L01(3Dmodel).STEP"
-    (offset (xyz 7.6 15.5 11.25))
+    (offset (xyz 5.76 12.75 11.75))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 -90))
   )
