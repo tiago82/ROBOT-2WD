@@ -463,7 +463,7 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.8,
         "via_diameter": 99.0,
-        "via_drill": 99.0,
+        "via_drill": 88.0,
         "wire_width": 8
       }
     ],
@@ -483,19 +483,19 @@
       },
       {
         "netclass": "MOTOR",
-        "pattern": "Net-(MOTOR1-Motor_line_+)"
+        "pattern": "/M1+"
+      },
+      {
+        "netclass": "BATT",
+        "pattern": "/M1-"
       },
       {
         "netclass": "MOTOR",
-        "pattern": "Net-(MOTOR1-Motor_Line_-)"
+        "pattern": "/M2+"
       },
       {
         "netclass": "MOTOR",
-        "pattern": "Net-(MOTOR2-Motor_line_+)"
-      },
-      {
-        "netclass": "MOTOR",
-        "pattern": "Net-(MOTOR2-Motor_Line_-)"
+        "pattern": "/M2-"
       },
       {
         "netclass": "BATT",
