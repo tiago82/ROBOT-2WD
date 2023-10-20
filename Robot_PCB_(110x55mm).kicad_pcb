@@ -1008,7 +1008,7 @@
       (net 40 "GND") (pinfunction "GND") (pintype "power_in") (tstamp dea31e01-0fa0-459e-9a30-fe6e3bb53960))
     (pad "30" thru_hole oval locked (at 25.4 0) (size 1.8 2.4) (drill 1) (layers "*.Cu" "*.Mask")
       (net 41 "VCC") (pinfunction "VIN") (pintype "power_in") (tstamp cc24cf03-f7f2-4615-9168-1f64cb510f46))
-    (model "${KICAD7_3RD_PARTY}/3dmodels/com_github_Sajitha-Aldeniya_KiCad-Simple-Libraries/SL_Development_Boards.3dshapes/DOIT_ESP32_devkit_V1.wrl"
+    (model "${KIPRJMOD}/GERE_3dmodels/ESP32/com_github_Sajitha-Aldeniya_KiCad-Simple-Libraries/DOIT_ESP32_devkit_V1.wrl"
       (offset (xyz 0 0 11.5))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1844,7 +1844,7 @@
       (net 26 "IN4") (pinfunction "4A") (pintype "input") (tstamp 2bb31863-e328-458e-ad19-deef2f8c240b))
     (pad "16" thru_hole oval (at 3.81 0) (size 1.8 2.5) (drill 0.8) (layers "*.Cu" "*.Mask")
       (net 20 "+5V") (pinfunction "VCC1") (pintype "power_in") (tstamp eb06fb40-e1e1-4f69-a672-3559824d5562))
-    (model "${KICAD7_3RD_PARTY}/3dmodels/com_github_Sajitha-Aldeniya_KiCad-Simple-Libraries/SL_Packages.3dshapes/DIP-16_With_Socket.wrl"
+    (model "${KIPRJMOD}/GERE_3dmodels/L293/com_github_Sajitha-Aldeniya_KiCad-Simple-Libraries/DIP-16_With_Socket.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
