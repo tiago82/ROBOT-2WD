@@ -509,8 +509,8 @@
       "idf": "",
       "netlist": "../../../../../Windows/System32/",
       "specctra_dsn": "",
-      "step": "../../../../Desktop/Robot_PIBID_Artigo.step",
-      "vrml": "../../../Desktop/Robot_2WD.wrl"
+      "step": "../../../Desktop/3d/Robot_PIBID_Artigo.step",
+      "vrml": "../../../Desktop/3d/Robot_2WD.wrl"
     },
     "page_layout_descr_file": ""
   },
