@@ -411,7 +411,7 @@
     )
   )
   (symbol "SW_DPDT_XLX" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
-    (property "Reference" "U" (at 0 8.89 0)
+    (property "Reference" "SW" (at 0 8.89 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_DPDT_XLX" (at 0 6.35 0)

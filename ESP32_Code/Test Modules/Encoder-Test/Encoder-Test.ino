@@ -1,9 +1,9 @@
 
 
-//============================
+//============== PCB Pinout ==============
 #define RST_RFID 2
 #define SDA_RFID 5
-#define SCK_RFID 9
+#define SCK_RFID 18
 #define MISO_RFID 19
 #define MOSI_RFID 23
 
@@ -27,74 +27,71 @@
 
 #define TRIG_PIN 21
 #define ECHO_PIN 17
-//===============================
+
+#define BUZZER_PIN 22
+//========================================
+
+
+// Variáveis do Sensor Infravermelho e PID
+double rpm;
+volatile byte pulsos;
+unsigned long timeold;
+unsigned int pulsosDisco = 20;    //Altere o valor conforme disco encoder
 
 
 
-int motor_c_ENA=9;  
-int motor_c_IN1=6;
-int motor_c_IN2=7;
 
-#define STBY 8
-#define ENCODER_A_PIN  2   
-#define ENCODER_B_PIN  3   
-long pulse_number=0;   
-int rpm;
 
-#include <MsTimer2.h> 
+// Função executada a cada interrupção
+void IRAM_ATTR contador()
+{
+  pulsos++;  //Incrementa contador
+  
+}
+
+
+
+
 
 void setup()
 {
-    pinMode(STBY, OUTPUT);       
-    digitalWrite(STBY, 1);
-    pinMode(motor_c_ENA,OUTPUT);  
-    pinMode(motor_c_IN1,OUTPUT);   
-    pinMode(motor_c_IN2,OUTPUT);  
+  // Inicia Serial
+  Serial.begin(115200);
 
-    MsTimer2::set(500, send);     
-    MsTimer2::start();        
 
-    pinMode(ENCODER_A_PIN, INPUT);
-     pinMode(ENCODER_B_PIN, INPUT);
-     attachInterrupt(0, read_quadrature, FALLING);  
-    Serial.begin(9600);    
+
+
+    // Configura Interrupção
+  pinMode(M1_S1, INPUT);
+  pinMode(M1_S2, INPUT);
+  pinMode(M2_S1, INPUT);
+  pinMode(M2_S2, INPUT);
+  attachInterrupt(digitalPinToInterrupt(M1_S1), contador, FALLING);
+   pulsos = 0;
+  rpm = 0;
+  timeold = 0;
+
+
 }
 
 void loop()
 {
-   digitalWrite(motor_c_IN1,0);
-    digitalWrite(motor_c_IN2,1);
-    for (int a=100;a<=255;a++)
-     {
-        analogWrite(motor_c_ENA,a);
-        delay(200);
-     }
 
-
-   digitalWrite(motor_c_IN1,0);
-    digitalWrite(motor_c_IN2,1);
-    for (int a=255;a>0;a--)
-    {
-        analogWrite(motor_c_ENA,a);
-        delay(200);
-     }
-}
-
-void send()    
-{
-     rpm=int(pulse_number/5.3);
-     Serial.print("rpm: ");
-     Serial.println(rpm, DEC);
-     pulse_number = 0;
-}
-
-void read_quadrature()    
-{
-  if (digitalRead(ENCODER_A_PIN) == LOW)
+  // Calcula RPM a cada 1 Segundo
+  if (millis() - timeold >= 1000)
   {
-    if (digitalRead(ENCODER_B_PIN) == LOW)
-    { pulse_number ++; }
-    if (digitalRead(ENCODER_B_PIN) == HIGH)   
-    { pulse_number --; }
+ 
+    timeold = millis();
+
+
+    // Exibe valores no serial monitor
+    Serial.println(pulsos);
+    //Serial.print("2222");
+
+
   }
+
+
 }
+
+

@@ -4,9 +4,10 @@
 #include <RF24.h>
 
 
+//============== PCB Pinout ==============
 #define RST_RFID 2
 #define SDA_RFID 5
-#define SCK_RFID 9
+#define SCK_RFID 18
 #define MISO_RFID 19
 #define MOSI_RFID 23
 
@@ -30,6 +31,9 @@
 
 #define TRIG_PIN 21
 #define ECHO_PIN 17
+
+#define BUZZER_PIN 22
+//========================================
 
 
 
